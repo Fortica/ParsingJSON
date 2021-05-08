@@ -5,7 +5,7 @@
 //  Created by Larisa on 03.05.2021.
 //
 
-import UIKit
+import Alamofire
 
 class ImageViewController: UIViewController {
 
@@ -14,29 +14,25 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.stopAnimating()
+        activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
-        fetchImage()
+        fetchInfo(from: URLApi.json.rawValue)
+        
         
     }
+    
+    private func fetchInfo(from url: String?) {
+        NetworkManager.shared.fetchSpase(from: url ?? "") { space in
+            guard let imageData = ImageManager.shared.fetchImage(from: space.url) else { return }
+        DispatchQueue.main.async {
+            self.imageView.image = UIImage(data: imageData)
+            self.activityIndicator.stopAnimating()
+        }
+        }
+    }
+        
 
-    private func fetchImage() {
-        guard let url = URL(string: URLExamples.imageURL.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, let response = response else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            print(response)
-            guard let image = UIImage(data: data) else { return }
-            
-            DispatchQueue.main.async {
-                self.imageView.image = image
-                self.activityIndicator.stopAnimating()
-            }
-        }.resume()
-        
-    }
+
+
 
 }
