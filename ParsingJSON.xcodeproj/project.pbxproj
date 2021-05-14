@@ -16,6 +16,7 @@
 		6A6771BF263FF04100AB9B48 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6771BE263FF04100AB9B48 /* Space.swift */; };
 		6A6771DE2640234D00AB9B48 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6771DD2640234D00AB9B48 /* ImageViewController.swift */; };
 		6A6771E12640235F00AB9B48 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6771E02640235F00AB9B48 /* InfoViewController.swift */; };
+		6A7EDB06264C6878003B0124 /* SpaceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EDB05264C6878003B0124 /* SpaceImageView.swift */; };
 		6AEE1D4B264301E300BC9BED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE1D4A264301E300BC9BED /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		6A6771BE263FF04100AB9B48 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		6A6771DD2640234D00AB9B48 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		6A6771E02640235F00AB9B48 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		6A7EDB05264C6878003B0124 /* SpaceImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceImageView.swift; sourceTree = "<group>"; };
 		6AEE1D4A264301E300BC9BED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		71DDC0D2499B81ECCD7C8138 /* Pods_ParsingJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsingJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40D9BF004A24B04406592ED /* Pods-ParsingJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsingJSON.debug.xcconfig"; path = "Target Support Files/Pods-ParsingJSON/Pods-ParsingJSON.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,8 +94,17 @@
 			children = (
 				6A6771DD2640234D00AB9B48 /* ImageViewController.swift */,
 				6A6771E02640235F00AB9B48 /* InfoViewController.swift */,
+				6A7EDB04264C67F8003B0124 /* Views */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A7EDB04264C67F8003B0124 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A7EDB05264C6878003B0124 /* SpaceImageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6AEE1D4F2643232200BC9BED /* Services */ = {
@@ -264,6 +275,7 @@
 			files = (
 				6A048CD4263F42A500925679 /* AppDelegate.swift in Sources */,
 				6A6771DE2640234D00AB9B48 /* ImageViewController.swift in Sources */,
+				6A7EDB06264C6878003B0124 /* SpaceImageView.swift in Sources */,
 				6AEE1D4B264301E300BC9BED /* NetworkManager.swift in Sources */,
 				6A048CD6263F42A500925679 /* SceneDelegate.swift in Sources */,
 				6A6771E12640235F00AB9B48 /* InfoViewController.swift in Sources */,
